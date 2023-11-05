@@ -1,0 +1,9 @@
+def fibonacci(v1, v2, run_cnt):
+    print(f'{v1} + {v2} = {v1 + v2}')
+
+    if run_cnt <= 1:
+        pass
+    else:
+        fibonacci(v2, v2 +v1, run_cnt - 1)
+
+run = fibonacci(0,1,10)
