@@ -7,3 +7,35 @@ def fibonacci(v1, v2, run_cnt):
         fibonacci(v2, v2 +v1, run_cnt - 1)
 
 run = fibonacci(0,1,10)
+
+
+#2 example:
+def fibonacci_num(num):
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    else:
+        return num - 1
+    
+number = int(input("Input the integer number for execute:" ))
+
+print(fibonacci_num(number))
+
+
+#3 The recursion example 3
+def gcd(n1, n2):
+    if n1 == n2:
+        return n2
+    elif n1 < n2:
+        return gcd(n1, n2 - n1)
+    else:
+        return gcd(n2, n1 - n2)
+
+
+number1 = int(input("Input the first value:"))
+number2 = int(input("Input the second value:"))
+
+
+result = gcd(number1, number2)
+print(result)
