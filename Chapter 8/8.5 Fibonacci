@@ -1,0 +1,27 @@
+#Create the Fibonacci recursive function with 1 variable (n) with start number is 0 and 1
+def fibonacci(n):
+
+    if n == 1:
+        return 1
+    if n == 0:
+        return 0
+    else:
+        return fibonacci(n-1) + fibonacci(n -2)
+
+print(fibonacci(7))
+
+
+
+
+
+# Create the Fibonacci recursive function with 3 variable (value1, value2, count_number)
+def fibonacci(value1, value2, count_number):
+    result = 0
+    if count_number == 0:
+        result = value2
+    else:
+        result = fibonacci(value2, value1 + value2, count_number - 1)
+    return result
+
+
+print(fibonacci(6,7,4))
