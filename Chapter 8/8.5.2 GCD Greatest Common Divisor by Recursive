@@ -1,0 +1,16 @@
+def gcd(value1, value2):
+    if value1 == value2:
+        print('Base case is reached')
+        return value1
+
+    else:
+        if value1 > value2:
+            print(value1, value2,) #check recursive
+            return gcd(value1 - value2, value2)
+
+        else:
+            print( value1, value2)
+            return gcd(value1, value2 - value1)
+
+
+print(gcd(4,10))
