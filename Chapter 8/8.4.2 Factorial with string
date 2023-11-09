@@ -1,0 +1,17 @@
+# Create the factorial result and string come out with factorial result: 
+# 7! = 7 * 6 * 5 * 4 * 3 * 2 *  + 1 = 5040
+
+def factorial(n, result_str):
+    result = 0
+    if n == 1:
+        result = 1
+        print(f'{result_str[0]}! = {result_str} + 1 = ',end="")
+
+    else:
+        string1 = result_str + str(n) + ' * '
+        result = n * factorial(n - 1, string1)
+    return result
+
+
+
+print(factorial(7,""))
