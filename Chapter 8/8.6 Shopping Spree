@@ -32,3 +32,6 @@ item = [
     {'name' : 'Cups',
     'price' : 11.85
     }]
+
+bag = []
+shopping_bag_combinations(bag, item)
