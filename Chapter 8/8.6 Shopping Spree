@@ -1,0 +1,34 @@
+max_items_in_bag = 3
+
+def shopping_bag_combinations(curr_bag, remaining_items):
+    if len(curr_bag) == max_items_in_bag:
+        bag_value = 0:
+        for item in curr_bag:
+            bag_value += item['price']
+            print(f'{item['name']}', end=" ")
+        print(f'= {bag_value})
+    else:
+        for index, item in enumerate(remaining_items):
+            curr_bag.append(item)
+            remaining_items.pop(index)
+
+            shopping_bag_combinations(curr_bag, remaining_items)
+
+            #take item out of bag
+            remaing_items.insert(index, item)
+            curr_bag.pop()
+
+
+item = [
+    {
+    'name' : 'Milk',
+    'price': 1.25},
+    {
+    'name': 'Belk',
+    'price' : 23.55},
+    {
+    'name' : 'Toys',
+    'price': 19.05},
+    {'name' : 'Cups',
+    'price' : 11.85
+    }]
