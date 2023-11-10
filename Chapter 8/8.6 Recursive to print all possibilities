@@ -1,0 +1,16 @@
+def scramble(r_letters,s_letters):
+
+    if len(r_letters) == 0:
+        print('Base case hit: ')
+        print(s_letters)
+
+    else:
+        for i in range(len(r_letters)):          #This is the loop started with i is 0
+            remain_letters = r_letters[:i] + r_letters[i+1:]
+            selected_letter = r_letters[i]
+            scramble(remain_letters,s_letters + selected_letter)
+
+print(scramble('ABC',""))
+
+
+
