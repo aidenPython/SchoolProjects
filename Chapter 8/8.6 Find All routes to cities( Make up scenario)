@@ -1,0 +1,24 @@
+distances = []
+def find_route(been_cities, remain_cities):
+
+    if len(been_cities) == 3:
+        cities =[]
+        for i in range(len(been_cities)):
+            cities.append(been_cities[i])
+        print(f'{cities}')
+
+    else:
+        for index in range(len(remain_cities)):
+            been_cities.append(remain_cities[index])
+            item = remain_cities[index]
+            remain_cities.pop(index)
+            find_route(been_cities,remain_cities)
+
+            remain_cities.insert(index,item)
+            been_cities.pop()
+
+
+c = []
+cities_input = ['Los Angeles','Boston','San Francisco']
+
+print(find_route(c,cities_input))
