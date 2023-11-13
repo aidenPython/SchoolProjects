@@ -1,0 +1,12 @@
+def print_num_pattern(num1,num2):
+
+    if (num1 < 0):
+        print(num1, end = ' ')
+    else:
+        print(num1, end = ' ')
+        print_num_pattern(num1 - num2, num2)
+        
+        print(num1, end = ' ')
+
+
+print_num_pattern(12, 3)
