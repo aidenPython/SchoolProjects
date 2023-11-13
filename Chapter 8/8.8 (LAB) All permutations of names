@@ -1,0 +1,34 @@
+def print_all_permutations(permList, nameList):
+    if len(permList) == 3:
+
+        for i in range(len(permList)):
+            if i == (len(permList) - 1):
+                print(permList[i])
+            else:
+                print(f'{permList[i]}',end=", ")
+
+
+    else:
+        for i in range(len(nameList)):
+            new_name = nameList[i]
+            permList.append(nameList[i])
+            nameList.pop(i)
+
+            print_all_permutations(permList, nameList)
+            nameList.insert(i,new_name)
+            permList.pop()
+
+
+
+if __name__ == "__main__":
+    nameList = input().split(' ')
+    permList = []
+    print_all_permutations(permList, nameList)
+
+
+
+"""permList = []
+user_input  = 'Julia Lucas Mia'
+nameList = user_input.split(' ')
+permList.append(nameList[1])
+print(permList)"""
